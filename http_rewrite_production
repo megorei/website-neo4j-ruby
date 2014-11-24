@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteCond %{http_host} !^www.neo4j-ruby.org [nc]
+RewriteRule ^(.*)$ http://www.neo4j-ruby.org/$1 [r=301,nc]

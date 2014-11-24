@@ -1,0 +1,13 @@
+AddType 'text/html; charset=UTF-8' html
+
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
+
+ExpiresActive On
+ExpiresByType image/gif A31536000
+ExpiresByType image/png A31536000
+ExpiresByType image/jpg A31536000
+ExpiresByType image/jpeg A31536000
+ExpiresByType text/css A31536000
+ExpiresByType application/x-javascript A31536000
+ExpiresByType application/javascript A31536000
+ExpiresByType text/plain A31536000
