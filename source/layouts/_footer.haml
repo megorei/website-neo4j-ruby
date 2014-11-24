@@ -1,1 +1,42 @@
-%footer
+%footer.footer
+  %h2 Additional information
+  .container
+    .row
+      .col-sm-4
+        %h3 Share with others
+
+        %ul
+          %li
+            %a(href="http://twitter.com/share?url=#{url}&text=#{current_page.data.title}&via=Neo4jRuby" title='Share this page on Twitter' target='_blank') Twitter
+          %li
+            %a(href="https://www.facebook.com/sharer/sharer.php?u=#{url}" title='Share this page on Facebook' target='_blank') Facebook
+          %li
+            %a(href="https://plus.google.com/share?url=#{url}" title='Share this page on Google+' target='_blank') Google+
+      .col-sm-4
+        %h3 Drop us a line
+        %p
+          Questions or ideas? Write an Email to
+          = mail_to 'neo4j-ruby@megorei.com'
+        %p
+          Or follow us on
+          = link_to 'twitter.com/Neo4jRuby', 'https://twitter.com/Neo4jRuby'
+
+      .col-sm-4
+        %h3 Improve this website
+        %p We need your help to improve this website with more resources about Neo4j and Ruby.
+        %p
+          Fork this website on
+          = link_to 'Github', 'https://github.com/megorei/website-neo4j-ruby'
+          and create a pull request.
+
+    .row
+      .col-sm-12
+        %p.text-center
+
+          %ul.list-inline
+            %li
+              &copy; 2014
+              = link_to 'megorei Software GmbH', 'http://www.megorei.com'
+            %li= link_to 'Legal infos', 'http://www.megorei.com/de/impressum'
+
+

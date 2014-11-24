@@ -3,6 +3,7 @@
 %meta(name="viewport" content="initial-scale=1.0")
 %meta(name="google-site-verification" content="")
 %meta{ name: 'description', content: current_page.data.description }
+%meta{ name: 'keywords', content: current_page.data.keywords }
 %title= [truncate(current_page.data.title, :length => 77)].join(' - ').gsub("\n", '')
 %link(rel="apple-touch-icon" href="/apple-touch-icon-iphone.png")
 %link(rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-ipad.png")
@@ -10,3 +11,4 @@
 %link(rel="icon" href="/favicon.ico" type="image/x-icon")
 = stylesheet_link_tag "all", :media => "all"
 = javascript_include_tag "all", async: true
+= partial 'layouts/fonts'

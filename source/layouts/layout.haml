@@ -4,5 +4,6 @@
     = partial 'layouts/html_head'
   %body{class: page_classes}
     = partial 'layouts/header'
+    = partial 'layouts/nav'
     = yield
-    = partial 'layouts/footer'
+    = partial 'layouts/footer', locals: { url: "http://www.neo4j-ruby.org#{current_page.url}"}

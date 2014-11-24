@@ -1,0 +1,17 @@
+---
+title: Articles about Neo4j and Ruby
+description: Add a description
+keywords: Add, some, keywords
+---
+
+.container
+  .row
+    .col-sm-12
+      = partial :page_header
+      - data.articles.reverse.each do |article|
+        .article
+          %h3
+            = link_to article.title, article.link
+          %p
+            written by
+            = article.author

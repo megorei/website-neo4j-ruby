@@ -1,0 +1,22 @@
+%nav.navbar.navbar-default.navbar-static-top(role="navigation")
+  %h2 Menu
+  .container
+    .navbar-header
+      %a.navbar-brand.brand(href='/')
+        = "<span class='brand-1'>Neo4j</span><span class='brand-2'>+</span><span class='brand-3'>Ruby</span>"
+      %button.navbar-toggle.collapsed(data-toggle="collapse" data-target="#nav-main")
+        %span.sr-only Menu
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+    .collapse.navbar-collapse#nav-main
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a(href='/getting_started/')
+            Getting started
+        %li
+          %a(href='/rubygems/')
+            Rubygems
+        %li
+          %a(href='/articles/')
+            Articles
