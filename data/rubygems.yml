@@ -4,14 +4,34 @@
   github: https://github.com/neo4jrb/neo4j
   rubygems: https://rubygems.org/gems/neo4j
 -
+  title: neo4j-core
+  description: Provides classes and methods to work with the graph database Neo4j.
+  github: https://github.com/neo4jrb/neo4j-core
+  rubygems: https://rubygems.org/gems/neo4j-core
+-
+  title: neo4j-cypher
+  description: A Ruby DSL for the Neo4j Cypher query language for both MRI and JRuby.
+  github: https://github.com/andreasronge/neo4j-cypher
+  rubygems: https://rubygems.org/gems/neo4j-cypher
+-
   title: carrierwave-neo4j
   description: Neo4j support for Carrierwave.
-  github: https://github.com/reu/carrierwave-neo4j
-  rubygems: https://rubygems.org/gems/carrierwave-neo4j
+  github: https://github.com/dpisarewski/carrierwave-neo4j
+-
+  title: neo4jrb-paperclip
+  description: Enables you to use Paperclip with Neo4j.rb.
+  rubygems: https://rubygems.org/gems/neo4jrb-paperclip
+-
+  title: pacer
+  description: JRuby library that enables very expressive graph traversals.
+  github: https://github.com/pangloss/pacer
+  rubygems: https://rubygems.org/gems/pacer
 -
   title: neography
   description: A thin Ruby wrapper to the Neo4j Rest API.
   github: https://github.com/maxdemarzi/neography
   rubygems: https://rubygems.org/gems/neography
-
-
+-
+  title: neo4j-even_easier_id
+  description: Automatically creates unique IDs based on the Ruby BSON object ID generation method.
+  rubygems: https://rubygems.org/gems/neo4j-even_easier_id

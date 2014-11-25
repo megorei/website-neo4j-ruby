@@ -1,6 +1,6 @@
 ---
 title: Rubygems for Neo4j Database
-description: Add a description
+description:
 keywords: Add, some, keywords
 ---
 
@@ -8,10 +8,12 @@ keywords: Add, some, keywords
   .row
     .col-sm-12
       = partial :page_header
-      - data.rubygems.reverse.each do |gem|
+      - data.rubygems.each do |gem|
         .rubygem
           %h3= gem.title
           %p= gem.description
           %ul.list-inline
-            %li= link_to 'Github', gem.github
-            %li= link_to 'Rubygems', gem.rubygems
+            -  if gem.github
+              %li= link_to 'Github', gem.github
+            - if gem.rubygems
+              %li= link_to 'Rubygems', gem.rubygems

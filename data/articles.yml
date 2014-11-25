@@ -1,4 +1,24 @@
 -
-  title: Nice Article
-  link: http://
-  author: Firstname Lastname
+  title: The Cypher Ruby DSL for the Neo4j Graph Database
+  link: http://www.jayway.com/2012/10/04/the-cypher-ruby-dsl-for-the-neo4j-graph-database/
+  author: Andreas Ronge
+-
+  title: Neo4j.rb 3.0.rc
+  link: http://www.jayway.com/2014/09/06/neo4j-rb-3-0-rc/
+  author: Andreas Ronge
+-
+  title: "Using a Graph Database with Ruby. Part I: Introduction"
+  link: http://www.sitepoint.com/using-a-graph-database-with-ruby-part-i-introduction/
+  author: Thiago Jackiw
+-
+  title: "Using a Graph Database with Ruby, Part II: Integration"
+  link: http://www.sitepoint.com/using-a-graph-database-with-ruby-part-ii-integration/
+  author: Thiago Jackiw
+-
+  title: Getting started with Ruby and Neo4j
+  link: http://maxdemarzi.com/2012/01/04/getting-started-with-ruby-and-neo4j/
+  author: Max De Marzi
+-
+  title: Intro to Neo4j with Ruby
+  link: http://slideshare.net/maxdemarzi/intro-to-neo4j-with-ruby
+  author: Max De Marzi
