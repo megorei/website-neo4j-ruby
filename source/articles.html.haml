@@ -9,7 +9,7 @@ keywords: Add, some, keywords
     .col-sm-12
       = partial :page_header
       - data.articles.reverse.each do |article|
-        .article
+        .content
           %h3
             = link_to article.title, article.link
           %p
