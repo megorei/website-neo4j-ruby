@@ -1,4 +1,12 @@
 -
+  title: Starting with graph databases using Neo4j and Rails
+  link: http://helabs.com.br/blog/2014/07/25/starting-with-graph-databases-using-neo4j-and-rails/
+  author: Tomás Augusto Müller
+-
+  title: Leveraging relations at scale with Neo4j
+  link: http://de.slideshare.net/alberto.perdomo/intro-neo4j
+  author: Alberto Perdomo
+-
   title: The Cypher Ruby DSL for the Neo4j Graph Database
   link: http://www.jayway.com/2012/10/04/the-cypher-ruby-dsl-for-the-neo4j-graph-database/
   author: Andreas Ronge
