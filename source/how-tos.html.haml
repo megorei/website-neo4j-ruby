@@ -8,4 +8,7 @@ keywords: how-tos, neo4j, ruby, tips, tricks
   .row
     .col-sm-12
       = partial :page_header
-      %p TODO: Add some How-Tos
+      - data.howtos.each do |howto|
+        .content
+          %h3
+            = link_to howto.title, howto.link
