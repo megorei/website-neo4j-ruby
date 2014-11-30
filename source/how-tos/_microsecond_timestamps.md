@@ -1,5 +1,3 @@
-### Saving timestamps with microsecond precision using neo4j gem
-
 Neo4j is currently persisting timestamps as integers in the database. As you can guess integer timestamps have second precision.
 
 ![Integer Timestamps](/images/integer_timestamps.png)
