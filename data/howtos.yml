@@ -1,6 +1,0 @@
--
-  title: Saving timestamps with microsecond precision using neo4j gem
-  link: /how-tos/microsecond_timestamps
--
-  title: Pagination(with Kaminari) for Neo4j
-  link: /how-tos/kaminari-neo4j

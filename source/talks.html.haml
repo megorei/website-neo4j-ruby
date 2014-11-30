@@ -1,0 +1,17 @@
+---
+title: Talks and Slides
+description: A collection of talks and slides about neo4j and ruby
+keywords: ruby, neo4j, talks, slides
+---
+
+.container
+  .row
+    .col-sm-12
+      = partial :page_header
+      - data.talks.each do |talk|
+        .content
+          %h3
+            = link_to talk.title, talk.link
+          %p
+            by
+            %strong= talk.speaker
