@@ -7,6 +7,14 @@
   link: http://de.slideshare.net/alberto.perdomo/intro-neo4j
   author: Alberto Perdomo
 -
+  title: Switching From MongoDB to Neo4j
+  link: http://neo4j.com/blog/switching-mongodb-neo4j/
+  author: Nick Manning
+-
+  title: Using Neo4j from Ruby
+  link: http://neo4j.com/developer/ruby/
+  author: Darrick Wiebe
+-
   title: The Cypher Ruby DSL for the Neo4j Graph Database
   link: http://www.jayway.com/2012/10/04/the-cypher-ruby-dsl-for-the-neo4j-graph-database/
   author: Andreas Ronge
