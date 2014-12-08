@@ -3,10 +3,6 @@
   link: http://helabs.com.br/blog/2014/07/25/starting-with-graph-databases-using-neo4j-and-rails/
   author: Tomás Augusto Müller
 -
-  title: Leveraging relations at scale with Neo4j
-  link: http://de.slideshare.net/alberto.perdomo/intro-neo4j
-  author: Alberto Perdomo
--
   title: Switching From MongoDB to Neo4j
   link: http://neo4j.com/blog/switching-mongodb-neo4j/
   author: Nick Manning
@@ -35,6 +31,14 @@
   link: http://maxdemarzi.com/2012/01/04/getting-started-with-ruby-and-neo4j/
   author: Max De Marzi
 -
-  title: Intro to Neo4j with Ruby
-  link: http://slideshare.net/maxdemarzi/intro-to-neo4j-with-ruby
-  author: Max De Marzi
+  title: Extracting Your LinkedIn Connections Into Neo4j Graph Database
+  link: http://gregdmd.com/blog/2014/06/22/extracting-your-linkedin-connections-into-neo4j-graph-database/
+  author: Greg Dziemidowicz
+-
+  title: Heroku Neo4j, App Harbor MVC4, Neo4jClient & Ruby Proxy
+  link: http://romikoderbynew.com/2012/01/29/heroku-neo4j-app-harbor-mvc4-neo4jclient-ruby-proxy/
+  author: Romiko Derbynew
+-
+  title: "neo4j: The Batch Inserter and the sunk cost fallacy"
+  link: http://www.markhneedham.com/blog/2012/09/23/neo4j-the-batch-inserter-and-the-sunk-cost-fallacy/
+  author: Mark Needham

@@ -2,3 +2,23 @@
   title: 'GraphConnect 2014 SF: CrunchBase'
   speaker: Kurt Freytag
   link: http://vimeo.com/110554200
+-
+  title: Leveraging relations at scale with Neo4j
+  link: http://de.slideshare.net/alberto.perdomo/intro-neo4j
+  speaker: Alberto Perdomo
+-
+  title: Intro to Neo4j with Ruby
+  link: http://slideshare.net/maxdemarzi/intro-to-neo4j-with-ruby
+  speaker: Max De Marzi
+-
+  title: Neo4j for Ruby and Rails
+  link: http://slideshare.net/pablete/neo4j-for-ruby-and-rails
+  speaker: pablete
+-
+  title: "Squire: A polyglot application combining Neo4j, MongoDB, Ruby and Scala @ FOSDEM GraphDevRoom 2013"
+  link: http://de.slideshare.net/alberto.perdomo/squire
+  speaker: Alberto Perdomo
+-
+  title: I Know Kung Fu (or Using Neo4j on Rails Without JRuby)!
+  link: http://www.confreaks.com/videos/1577-rulu2012-i-know-kung-fu-or-using-neo4j-on-rails-without-jruby
+  speaker: Rogelio J. Samour
