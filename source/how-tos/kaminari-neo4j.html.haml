@@ -2,6 +2,7 @@
 title: Kaminari and Neo4j
 description: Pagination with Kaminari for Neo4j
 keywords: kaminari, how-tos, neo4j, ruby
+author: Dieter Pisarewski
 ---
 
 .container
@@ -9,3 +10,5 @@ keywords: kaminari, how-tos, neo4j, ruby
     .col-sm-12
       = partial :page_header
       = partial 'how-tos/kaminari-neo4j'
+      Author:
+      = current_resource.data.author
