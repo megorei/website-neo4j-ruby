@@ -9,7 +9,9 @@ So we decided to add neo4j support for kaminari.
 
 You can give it a try by adding in your Gemfile:
 
-    gem 'kaminari', github: 'dpisarewski/kaminari', branch: 'neo4j'
+~~~ruby
+gem 'kaminari', github: 'dpisarewski/kaminari', branch: 'neo4j'
+~~~
 
 
 
