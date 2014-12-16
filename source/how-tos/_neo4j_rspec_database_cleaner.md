@@ -2,8 +2,8 @@
 
 Assuming you already installed [neo4j](https://github.com/neo4jrb/neo4j) and [RSpec](https://github.com/rspec/rspec-rails), at first we have to install a separate database for our tests.
 
-    rake neo4j:install[community-2.1.5,development]  #development database
-    rake neo4j:install[community-2.1.5,test]         #test database
+    rake neo4j:install[community-2.1.6,development]  #development database
+    rake neo4j:install[community-2.1.6,test]         #test database
 
 By default both databases will try to start on the same port so we should change configuration of the test database to resolve the conflict.
 
