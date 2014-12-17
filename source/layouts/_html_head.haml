@@ -6,7 +6,7 @@
 %meta{ name: 'description', content: current_page.data.description }
 %meta{ name: 'keywords', content: current_page.data.keywords }
 %meta{ name: 'google-site-verification', content: 'sndAfeS7VYJOKzvoXaxYRVgWFjm7_drU6A11H2Qvhq4' }
-%title= [truncate(current_page.data.title, :length => 77), 'Neo4j meets Ruby'].join(' - ').gsub("\n", '')
+%title= truncate(current_page.data.title, :length => 77).gsub("\n", '')
 = stylesheet_link_tag :all, media: :all
 = javascript_include_tag :all, async: true
 = partial 'layouts/fonts'
