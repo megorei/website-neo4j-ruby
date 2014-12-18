@@ -42,3 +42,7 @@
   title: "neo4j: The Batch Inserter and the sunk cost fallacy"
   link: http://www.markhneedham.com/blog/2012/09/23/neo4j-the-batch-inserter-and-the-sunk-cost-fallacy/
   author: Mark Needham
+-
+  title: "Graph Kit for Ruby: Let’s Build a Recommendation Engine for a Spree Store"
+  link: https://blog.engineyard.com/2014/graph-kit-for-ruby-lets-build-a-recommendation-engine-for-a-spree-store
+  author: Daniel Pritchett
