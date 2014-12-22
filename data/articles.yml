@@ -46,3 +46,39 @@
   title: "Graph Kit for Ruby: Let’s Build a Recommendation Engine for a Spree Store"
   link: https://blog.engineyard.com/2014/graph-kit-for-ruby-lets-build-a-recommendation-engine-for-a-spree-store
   author: Daniel Pritchett
+-
+  title: A Collection of Brilliant Neo4j Heroku Challenge Projects
+  link: http://cloud.dzone.com/articles/collection-brilliant-neo4j
+  author: Eric Genesky
+-
+  title: Talking with Neo4j Graphs
+  link: http://tomasmuller.com.br/2012/02/13/talking-with-neo4j-graphs/
+  author: Tomás Augusto Müller
+-
+  title: Analyzing Twitter with Neo4j and Rails
+  link: http://blog.brian-underwood.codes/ruby/rails/neo4j/announcements/2014/12/17/analyzing_twitter_with_neo4j_and_rails/
+  author: Brian Underwood
+-
+  title: Graph Visualization and Neo4j
+  link: http://maxdemarzi.com/2012/01/11/graph-visualization-and-neo4j/
+  author: Max De Marzi
+-
+  title: Neo4j on heroku
+  link: http://maxdemarzi.com/2012/01/13/neo4j-on-heroku-part-one/
+  author: Max De Marzi
+-
+  title: It’s over 9000! Neo4j on WebSockets
+  link: http://maxdemarzi.com/2014/03/10/its-over-9000-neo4j-on-websockets/
+  author: Max De Marzi
+-
+  title: Neo4j Adopted By Retail Giants eBay and Walmart For Real-Time, E-commerce Analytics
+  link: http://cloud-computing-today.com/2014/03/23/1068051/
+  author: Arnal Dayaratna
+-
+  title: "The Crunchbase Graph : importing data into Neo4j"
+  link: http://linkurio.us/crunchbase-graph-importing-data-neo4j/
+  author: Jean
+-
+  title: Installing Neo4j in an Azure Linux VM
+  link: http://codebetter.com/howarddierking/2012/12/29/installing-neo4j-in-an-azure-linux-vm/
+  author: Howard Dierking
