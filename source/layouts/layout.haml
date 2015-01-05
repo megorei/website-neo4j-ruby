@@ -6,4 +6,5 @@
     = partial 'layouts/header'
     = partial 'layouts/nav'
     = yield
+    = partial 'layouts/disqus' if show_disqus?
     = partial 'layouts/footer', locals: { url: "http://www.neo4j-ruby.org#{current_page.url}"}

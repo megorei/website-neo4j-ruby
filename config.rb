@@ -12,6 +12,12 @@ set :images_dir, 'images'
 set :css_dir,    'stylesheets'
 set :js_dir,     'javascripts'
 
+helpers do
+  def show_disqus?
+    current_page.path =~ /^how-tos/ && current_page.path != 'how-tos.html'
+  end
+end
+
 case ENV['TARGET'].to_s.downcase
 when 'production'
   activate :deploy do |deploy|
