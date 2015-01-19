@@ -8,7 +8,7 @@ Neo4j throws this error when you are assigning an association to a non-persisted
 
 A closer look at the source code of factory_girl it assigns every attribute including associations to the factory you are creating:
 
-https://github.com/thoughtbot/factory_girl/blob/master/lib/factory_girl/attribute_assigner.rb#L16
+**https://github.com/thoughtbot/factory_girl/blob/master/lib/factory_girl/attribute_assigner.rb#L16**
 
 ~~~ruby
 module FactoryGirl

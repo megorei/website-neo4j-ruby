@@ -26,7 +26,7 @@ Now we should be able to start both databases simultaneously by running:
 I recently pushed basic neo4j support to the [database cleaner](https://github.com/DatabaseCleaner/database_cleaner) gem. So we have to install the version from the master branch.
 Add to your Gemfile:
 
-Gemfile
+**Gemfile**
 
 ~~~ruby
   gem 'database_cleaner', github: 'DatabaseCleaner/database_cleaner'
@@ -38,7 +38,7 @@ and install it.
 
 To integrate it with RSpec open the rails_helper file and require database cleaner and all your models above the configuration block:
 
-spec/rails_helper.rb
+**spec/rails_helper.rb**
 
 ~~~ruby
 require 'database_cleaner'
@@ -51,7 +51,7 @@ You have to preload models if you use transaction strategy which is default for 
 
 Then add into the configuration block these lines:
 
-spec/rails_helper.rb
+**spec/rails_helper.rb**
 
 ~~~ruby
 RSpec.configure do |config|

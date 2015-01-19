@@ -7,7 +7,7 @@ If you want persisted timestamps to have higher precision it's better to save th
 
 Here is a sample code how to make it:
 
-app/models/your_model.rb
+**app/models/your_model.rb**
 
 ~~~ ruby
 class YourModel
@@ -20,7 +20,7 @@ class YourModel
 end
 ~~~
 
-app/ext/microsecond_timestamp.rb
+**app/ext/microsecond_timestamp.rb**
 
 ~~~ ruby
 class MicrosecondTimestamp
@@ -49,7 +49,7 @@ class MicrosecondTimestamp
 end
 ~~~
 
-app/ext/neo4j/shared/type_converters.rb
+**app/ext/neo4j/shared/type_converters.rb**
 
 ~~~ ruby
 module Neo4j::Shared::TypeConverters
@@ -75,7 +75,7 @@ module Neo4j::Shared::TypeConverters
 end
 ~~~
 
-app/ext/microsecond_timestamp_typecaster.rb
+**app/ext/microsecond_timestamp_typecaster.rb**
 
 ~~~ ruby
 class MicrosecondTimestampTypecaster
