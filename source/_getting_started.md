@@ -16,7 +16,7 @@
 
         neo4j start
 
-* or dowloaded
+* or downloaded
 
         cd path/to/your/neo4j
         bin/neo4j start
