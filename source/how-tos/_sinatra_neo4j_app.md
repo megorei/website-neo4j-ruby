@@ -503,4 +503,4 @@ $(document).ready(function(){
 });
 ~~~
 
-Please take a look at the complete source code of the application at [https://github.com/megorei/sinatra-neo4j-demo] if something was not clear.
+Please take a look at the complete source code of the application at [https://github.com/megorei/sinatra-neo4j-demo](https://github.com/megorei/sinatra-neo4j-demo) if something was not clear.
