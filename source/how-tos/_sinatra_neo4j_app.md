@@ -2,7 +2,7 @@
 
 Sinatra is a simple web-framework written in Ruby. I've just created a simple Sinatra app to demonstrate how you could
 use neo4j with sinatra. This [neo4j gist](http://gist.neo4j.org/?8748719) was chosen as a scenario for this application.
-The [application(Doctor Finder)](https://sinatra-demo-app.herokuapp.com/) will find adequate drugs and doctors by symptoms.
+The application [Doctor Finder](https://sinatra-demo-app.herokuapp.com/) will find adequate drugs and doctors by symptoms.
 
 I will describe how I created this app step by step.
 
