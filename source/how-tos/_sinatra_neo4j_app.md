@@ -1,6 +1,6 @@
 ### Introduction
 
-Sinatra is a simple web-framework written in Ruby. I've just created a simple sinatra app to demonstrate how you could
+Sinatra is a simple web-framework written in Ruby. I've just created a simple Sinatra app to demonstrate how you could
 use neo4j with sinatra. This [neo4j gist](http://gist.neo4j.org/?8748719) was chosen as a scenario for this application.
 The [application(Doctor Finder)](https://sinatra-demo-app.herokuapp.com/) will find adequate drugs and doctors by symptoms.
 
@@ -10,7 +10,7 @@ I will describe how I created this app step by step.
 
 #### Sinatra
 
-At first create a Gemfile and add sinatra, neo4j and haml to it:
+At first create a Gemfile and add Sinatra, Neo4j and Haml to it:
 
 **Gemfile**
 
@@ -37,7 +37,7 @@ require 'sinatra'
 ~~~
 
 Let's also define some settings for sinatra, port 80 for the server in production environment and a template engine
-[HAML](http://haml.info/) for our views.
+[Haml](http://haml.info/) for our views.
 
 **app.rb**
 
