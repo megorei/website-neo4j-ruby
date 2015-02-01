@@ -324,9 +324,7 @@ frameworks together with [Bootstrap Multiselect](https://github.com/davidstutz/b
 
 The user now should be able to input his age, symptoms and allergies. The other two routes have to be implemented to find adequate drugs and doctors.
 
-Let's create 2 classes: DrugAdvisor and DoctorAdvisor. We put the queries from [neo4j gist](http://gist.neo4j.org/?8748719) with some changes into this classes.
-
-**advisors/drug_advisor.rb**
+Firstly we set up some base classes:
 
 ~~~ruby
   class Pathology
@@ -349,18 +347,31 @@ Let's create 2 classes: DrugAdvisor and DoctorAdvisor. We put the queries from [
     property :name
   end
 
+  class Doctor
+    include Neo4j::ActiveNode
+    property :name
+  end
+~~~
+
+Now let's create 2 classes: DrugAdvisor and DoctorAdvisor. We put the queries from [neo4j gist](http://gist.neo4j.org/?8748719) with some changes into this classes.
+
+**advisors/drug_advisor.rb**
+
+~~~ruby
   class DrugAdvisor
     def find(symptom_names, age, allergy_names = [])
+      find_query(symptom_names, age, allergy_names).pluck('DISTINCT(drug)')
+    end
+
+    def find_query(symptom_names, age, allergy_names = [])
       Symptom.all.where(name: symptom_names).
         pathologies.
-        drug_classes(:dc, :cures).where('cures.age_min <= {age} AND {age} < cures.age_max').
+        drug_classes(:drug_class, :cures).where('cures.age_min <= {age} AND {age} < cures.age_max').
         params(age: age).
         drugs.query_as(:drug).
           match(allergy: :Allergy).
           where('(NOT (drug)-[:may_cause_allergy]->(allergy) OR NOT(allergy.name IN {allergy_names}))').
-          params(age: age, allergy_names: allergy_names).
-          pluck('DISTINCT(drug)')
-
+          params(age: age, allergy_names: allergy_names)
     end
   end
 ~~~
@@ -369,26 +380,16 @@ Let's create 2 classes: DrugAdvisor and DoctorAdvisor. We put the queries from [
 
 ~~~ruby
   class DoctorAdvisor
-    def find(symptoms, age, allergies = [], latitude = nil, longitude = nil)
-      Neo4j::Session.current.query.
-          match('(patho:Pathology)-[:may_manifest_symptoms]->(symptoms:Symptom)').
-          where('symptoms.name' => symptoms).
-          with('patho').
-          match('(drug_class:DrugClass)-[cures:cures]->(patho)').
-          where('cures.age_min <= {age} AND {age} < cures.age_max').
-          params(age: age).
-          with('drug_class').
-          match('(drug:Drug)-[:belongs_to_class]->(drug_class), (allergy:Allergy)').
-          where('NOT (drug)-[:may_cause_allergy]->(allergy) OR NOT(allergy.name IN {allergies})').
-          params(allergies: allergies).
-          with('drug_class, drug').
-          match('(doctor:Doctor)-->(spe:DoctorSpecialization)-[:can_prescribe]->(drug_class)').
-          return('DISTINCT(doctor) AS doctor, 2 * 6371 * asin(sqrt(haversin(radians({lat} - COALESCE(doctor.latitude,{lat}))) + cos(radians({lat})) * cos(radians(COALESCE(doctor.latitude,90)))* haversin(radians({long} - COALESCE(doctor.longitude,{long}))))) AS distance').
-          params(lat: latitude, long: longitude).
-          order('distance ASC').
-          inject({}) do |hash, result|
-            hash.merge!(result.doctor => result.distance)
-          end
+    def find(symptom_names, age, allergy_names = [], latitude = nil, longitude = nil)
+      DrugAdvisor.new.find_query(symptom_names, age, allergy_names).
+        match('(doctor:Doctor)-->(:DoctorSpecialization)-[:can_prescribe]->(drug_class)').
+        return('DISTINCT(doctor) AS doctor',
+               '2 * 6371 * asin(sqrt(haversin(radians({lat} - COALESCE(doctor.latitude,{lat}))) + cos(radians({lat})) * cos(radians(COALESCE(doctor.latitude,90)))* haversin(radians({long} - COALESCE(doctor.longitude,{long}))))) AS distance').
+        params(lat: latitude, long: longitude).
+        order('distance ASC').
+        each_with_object({}) do |result, hash|
+          hash[result.doctor] = result.distance
+        end
     end
   end
 ~~~
