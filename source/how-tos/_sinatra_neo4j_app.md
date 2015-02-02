@@ -130,61 +130,63 @@ I modified it a little so the Node labels in the database match model class name
 **db/seeds.rb**
 
 ~~~ruby
-Neo4j::Session.current._query(<<query)
-create
-(_6:DrugClass  {id: 1, name:"Bronchodilators"}),
-(_7:DrugClass  {id: 2, name:"Corticosteroids"}),
-(_8:DrugClass  {id: 3, name:"Xanthine"}),
-(_9:Drug   {id: 1, name:"Salbutamol"}),
-(_10:Drug  {id: 2, name:"Terbutaline"}),
-(_11:Drug  {id: 3, name:"Bambuterol"}),
-(_12:Drug  {id: 4, name:"Formoterol"}),
-(_13:Drug  {id: 5, name:"Salmeterol"}),
-(_14:Drug  {id: 6, name:"Beclometasone"}),
-(_15:Drug  {id: 7, name:"Budesonide"}),
-(_16:Drug  {id: 8, name:"Ciclesonide"}),
-(_17:Drug  {id: 9, name:"Fluticasone"}),
-(_18:Drug  {id: 10, name:"Mometasone"}),
-(_19:Drug  {id: 11, name:"Betametasone"}),
-(_20:Drug  {id: 12, name:"Prednisolone"}),
-(_21:Drug  {id: 13, name:"Dilatrane"}),
-(_22:Allergy  {id: 1, name:"Hypersensitivity to Betametasone"}),
-(_23:Pathology  {id: 1, name:"Asthma"}),
-(_24:Symptom  {id: 1, name:"Wheezing"}),
-(_25:Symptom  {id: 2, name:"Chest tightness"}),
-(_26:Symptom  {id: 3, name:"Cough"}),
-(_27:Doctor  {id: 1, latitude:48.8573,longitude:2.35685,name:"Irving Matrix"}),
-(_28:Doctor  {id: 2, latitude:46.83144,longitude:-71.28454,name:"Jack McKee"}),
-(_29:Doctor  {id: 3, latitude:48.86982,longitude:2.32503,name:"Michaela Quinn"}),
-(_30:DoctorSpecialization  {id: 1, name:"Physician"}),
-(_31:DoctorSpecialization  {id: 2, name:"Angiologist"}),
-_6-[:cures {age_max:60,age_min:18,indication:"Adult asthma"}]->_23,
-_7-[:cures {age_max:18,age_min:5,indication:"Child asthma"}]->_23,
-_8-[:cures {age_max:60,age_min:18,indication:"Adult asthma"}]->_23,
-_9-[:belongs_to_class]->_6,
-_10-[:belongs_to_class]->_6,
-_11-[:belongs_to_class]->_6,
-_12-[:belongs_to_class]->_6,
-_13-[:belongs_to_class]->_6,
-_14-[:belongs_to_class]->_7,
-_15-[:belongs_to_class]->_7,
-_16-[:belongs_to_class]->_7,
-_17-[:belongs_to_class]->_7,
-_18-[:belongs_to_class]->_7,
-_19-[:belongs_to_class]->_6,
-_19-[:belongs_to_class]->_7,
-_19-[:may_cause_allergy]->_22,
-_20-[:belongs_to_class]->_7,
-_21-[:belongs_to_class]->_8,
-_23-[:may_manifest_symptoms]->_24,
-_23-[:may_manifest_symptoms]->_25,
-_23-[:may_manifest_symptoms]->_26,
-_27-[:specializes_in]->_31,
-_28-[:specializes_in]->_31,
-_29-[:specializes_in]->_30,
-_30-[:can_prescribe]->_7,
-_31-[:can_prescribe]->_6
+query_string = <<query
+  create
+  (_6:DrugClass  {id: 1, name:"Bronchodilators"}),
+  (_7:DrugClass  {id: 2, name:"Corticosteroids"}),
+  (_8:DrugClass  {id: 3, name:"Xanthine"}),
+  (_9:Drug   {id: 1, name:"Salbutamol"}),
+  (_10:Drug  {id: 2, name:"Terbutaline"}),
+  (_11:Drug  {id: 3, name:"Bambuterol"}),
+  (_12:Drug  {id: 4, name:"Formoterol"}),
+  (_13:Drug  {id: 5, name:"Salmeterol"}),
+  (_14:Drug  {id: 6, name:"Beclometasone"}),
+  (_15:Drug  {id: 7, name:"Budesonide"}),
+  (_16:Drug  {id: 8, name:"Ciclesonide"}),
+  (_17:Drug  {id: 9, name:"Fluticasone"}),
+  (_18:Drug  {id: 10, name:"Mometasone"}),
+  (_19:Drug  {id: 11, name:"Betametasone"}),
+  (_20:Drug  {id: 12, name:"Prednisolone"}),
+  (_21:Drug  {id: 13, name:"Dilatrane"}),
+  (_22:Allergy  {id: 1, name:"Hypersensitivity to Betametasone"}),
+  (_23:Pathology  {id: 1, name:"Asthma"}),
+  (_24:Symptom  {id: 1, name:"Wheezing"}),
+  (_25:Symptom  {id: 2, name:"Chest tightness"}),
+  (_26:Symptom  {id: 3, name:"Cough"}),
+  (_27:Doctor  {id: 1, latitude:48.8573,longitude:2.35685,name:"Irving Matrix"}),
+  (_28:Doctor  {id: 2, latitude:46.83144,longitude:-71.28454,name:"Jack McKee"}),
+  (_29:Doctor  {id: 3, latitude:48.86982,longitude:2.32503,name:"Michaela Quinn"}),
+  (_30:DoctorSpecialization  {id: 1, name:"Physician"}),
+  (_31:DoctorSpecialization  {id: 2, name:"Angiologist"}),
+  _6-[:cures {age_max:60,age_min:18,indication:"Adult asthma"}]->_23,
+  _7-[:cures {age_max:18,age_min:5,indication:"Child asthma"}]->_23,
+  _8-[:cures {age_max:60,age_min:18,indication:"Adult asthma"}]->_23,
+  _9-[:belongs_to_class]->_6,
+  _10-[:belongs_to_class]->_6,
+  _11-[:belongs_to_class]->_6,
+  _12-[:belongs_to_class]->_6,
+  _13-[:belongs_to_class]->_6,
+  _14-[:belongs_to_class]->_7,
+  _15-[:belongs_to_class]->_7,
+  _16-[:belongs_to_class]->_7,
+  _17-[:belongs_to_class]->_7,
+  _18-[:belongs_to_class]->_7,
+  _19-[:belongs_to_class]->_6,
+  _19-[:belongs_to_class]->_7,
+  _19-[:may_cause_allergy]->_22,
+  _20-[:belongs_to_class]->_7,
+  _21-[:belongs_to_class]->_8,
+  _23-[:may_manifest_symptoms]->_24,
+  _23-[:may_manifest_symptoms]->_25,
+  _23-[:may_manifest_symptoms]->_26,
+  _27-[:specializes_in]->_31,
+  _28-[:specializes_in]->_31,
+  _29-[:specializes_in]->_30,
+  _30-[:can_prescribe]->_7,
+  _31-[:can_prescribe]->_6
 query
+
+Neo4j::Session.current.query(query_string)
 ~~~
 
 I also created rake tasks to seed the db and to clear it from command line:
@@ -322,56 +324,74 @@ frameworks together with [Bootstrap Multiselect](https://github.com/davidstutz/b
 
 The user now should be able to input his age, symptoms and allergies. The other two routes have to be implemented to find adequate drugs and doctors.
 
-Let's create 2 classes: DrugAdvisor and DoctorAdvisor. We put the queries from [neo4j gist](http://gist.neo4j.org/?8748719) with some changes into this classes.
+Firstly we set up some base classes:
+
+~~~ruby
+  class Pathology
+    include Neo4j::ActiveNode
+    has_many :in, :drug_classes, type: :cures
+  end
+
+  class Symptom
+    include Neo4j::ActiveNode
+    has_many :in, :pathologies, type: :may_manifest_symptoms
+  end
+
+  class DrugClass
+    include Neo4j::ActiveNode
+    has_many :in, :drugs, type: :belongs_to_class
+  end
+
+  class Drug
+    include Neo4j::ActiveNode
+    property :name
+  end
+
+  class Doctor
+    include Neo4j::ActiveNode
+    property :name
+  end
+~~~
+
+Now let's create 2 classes: DrugAdvisor and DoctorAdvisor. We put the queries from [neo4j gist](http://gist.neo4j.org/?8748719) with some changes into this classes.
 
 **advisors/drug_advisor.rb**
 
 ~~~ruby
-class DrugAdvisor
-  def find(symptoms, age, allergies = [])
-    Neo4j::Session.current.query.
-        match('(patho:Pathology)-[:may_manifest_symptoms]->(symptoms:Symptom)').
-        where('symptoms.name' => symptoms).
-        with('patho').
-        match('(drug_class:DrugClass)-[cures:cures]->(patho)').
-        where('cures.age_min <= {age} AND {age} < cures.age_max').
+  class DrugAdvisor
+    def find(symptom_names, age, allergy_names = [])
+      find_query(symptom_names, age, allergy_names).pluck('DISTINCT(drug)')
+    end
+
+    def find_query(symptom_names, age, allergy_names = [])
+      Symptom.all.where(name: symptom_names).
+        pathologies.
+        drug_classes(:drug_class, :cures).where('cures.age_min <= {age} AND {age} < cures.age_max').
         params(age: age).
-        with('drug_class').
-        match('(drug:Drug)-[:belongs_to_class]->(drug_class), (allergy:Allergy)').
-        where('NOT (drug)-[:may_cause_allergy]->(allergy) OR NOT(allergy.name IN {allergies})').
-        params(allergies: allergies).
-        return('DISTINCT(drug) AS drug').
-        to_a.map(&:drug)
+        drugs.query_as(:drug).
+          match(allergy: :Allergy).
+          where('(NOT (drug)-[:may_cause_allergy]->(allergy) OR NOT(allergy.name IN {allergy_names}))').
+          params(age: age, allergy_names: allergy_names)
+    end
   end
-end
 ~~~
 
 **advisors/doctor_advisor.rb**
 
 ~~~ruby
-class DoctorAdvisor
-  def find(symptoms, age, allergies = [], latitude = nil, longitude = nil)
-    Neo4j::Session.current.query.
-        match('(patho:Pathology)-[:may_manifest_symptoms]->(symptoms:Symptom)').
-        where('symptoms.name' => symptoms).
-        with('patho').
-        match('(drug_class:DrugClass)-[cures:cures]->(patho)').
-        where('cures.age_min <= {age} AND {age} < cures.age_max').
-        params(age: age).
-        with('drug_class').
-        match('(drug:Drug)-[:belongs_to_class]->(drug_class), (allergy:Allergy)').
-        where('NOT (drug)-[:may_cause_allergy]->(allergy) OR NOT(allergy.name IN {allergies})').
-        params(allergies: allergies).
-        with('drug_class, drug').
-        match('(doctor:Doctor)-->(spe:DoctorSpecialization)-[:can_prescribe]->(drug_class)').
-        return('DISTINCT(doctor) AS doctor, 2 * 6371 * asin(sqrt(haversin(radians({lat} - COALESCE(doctor.latitude,{lat}))) + cos(radians({lat})) * cos(radians(COALESCE(doctor.latitude,90)))* haversin(radians({long} - COALESCE(doctor.longitude,{long}))))) AS distance').
+  class DoctorAdvisor
+    def find(symptom_names, age, allergy_names = [], latitude = nil, longitude = nil)
+      DrugAdvisor.new.find_query(symptom_names, age, allergy_names).
+        match('(doctor:Doctor)-->(:DoctorSpecialization)-[:can_prescribe]->(drug_class)').
+        return('DISTINCT(doctor) AS doctor',
+               '2 * 6371 * asin(sqrt(haversin(radians({lat} - COALESCE(doctor.latitude,{lat}))) + cos(radians({lat})) * cos(radians(COALESCE(doctor.latitude,90)))* haversin(radians({long} - COALESCE(doctor.longitude,{long}))))) AS distance').
         params(lat: latitude, long: longitude).
         order('distance ASC').
-        inject({}) do |hash, result|
-          hash.merge!(result.doctor => result.distance)
+        each_with_object({}) do |result, hash|
+          hash[result.doctor] = result.distance
         end
+    end
   end
-end
 ~~~
 
 They expect symptoms, age and allergies as input. DoctorAdvisor is also able to calculate distance to each doctor from given coordinates.
@@ -504,3 +524,4 @@ $(document).ready(function(){
 ~~~
 
 Please take a look at the complete source code of the application at [https://github.com/megorei/sinatra-neo4j-demo](https://github.com/megorei/sinatra-neo4j-demo) if something was not clear.
+
