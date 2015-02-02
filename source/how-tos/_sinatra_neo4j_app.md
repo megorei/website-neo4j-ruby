@@ -452,7 +452,7 @@ get '/doctor' do
 end
 ~~~
 
-The `drug` routes will return an array with drug names and the `/doctor` route will return a hash with doctor names and distances as json.
+The `/drug` route will return an array with drug names and the `/doctor` route will return a hash with doctor names and distances as json.
 
 All we have to do now is to send ajax requests to the server to find drugs and doctors and insert the returned data into the page when user changes inputs.
 But wait a minute. Geolocation should be send to the `/doctor` routes and we still don't have any way to get it from the user.
