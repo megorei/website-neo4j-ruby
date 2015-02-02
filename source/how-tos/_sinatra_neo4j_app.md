@@ -329,26 +329,36 @@ Firstly we set up some base classes:
 ~~~ruby
   class Pathology
     include Neo4j::ActiveNode
+    include IntegerId
+
     has_many :in, :drug_classes, type: :cures
   end
 
   class Symptom
     include Neo4j::ActiveNode
+    include IntegerId
+
     has_many :in, :pathologies, type: :may_manifest_symptoms
   end
 
   class DrugClass
     include Neo4j::ActiveNode
+    include IntegerId
+
     has_many :in, :drugs, type: :belongs_to_class
   end
 
   class Drug
     include Neo4j::ActiveNode
+    include IntegerId
+
     property :name
   end
 
   class Doctor
     include Neo4j::ActiveNode
+    include IntegerId
+
     property :name
   end
 ~~~
