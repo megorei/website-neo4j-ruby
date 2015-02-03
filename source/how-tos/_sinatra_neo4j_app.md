@@ -331,6 +331,7 @@ Firstly we set up some base classes:
     include Neo4j::ActiveNode
     include IntegerId
 
+    property :name
     has_many :in, :drug_classes, type: :cures
   end
 
@@ -338,6 +339,7 @@ Firstly we set up some base classes:
     include Neo4j::ActiveNode
     include IntegerId
 
+    property :name
     has_many :in, :pathologies, type: :may_manifest_symptoms
   end
 
@@ -345,6 +347,7 @@ Firstly we set up some base classes:
     include Neo4j::ActiveNode
     include IntegerId
 
+    property :name
     has_many :in, :drugs, type: :belongs_to_class
   end
 
