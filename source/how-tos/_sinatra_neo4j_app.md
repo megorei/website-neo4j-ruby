@@ -237,9 +237,9 @@ After running `rake db:seed` the database will be populated with some data.
 There will be 3 routes in the application:
 
 ~~~
-/       - page with form
-/drug   - should return found drugs
-/doctor - should return found doctors and distances to them
+/        - page with form
+/drugs   - should return found drugs
+/doctors - should return found doctors and distances to them
 ~~~
 
 Let's begin with the root route `/`. It should load all symptoms and allergies from the database and render a form with
@@ -441,12 +441,12 @@ get '/' do
   haml :index
 end
 
-get '/drug' do
+get '/drugs' do
   @drugs = DrugAdvisor.new.find(symptoms, age, allergies)
   @drugs.map(&:name).to_json
 end
 
-get '/doctor' do
+get '/doctors' do
   results = DoctorAdvisor.new.find(symptoms, age, allergies, latitude, longitude)
   results.inject({}) do |hash, pair|
     doctor, distance = pair
@@ -455,10 +455,10 @@ get '/doctor' do
 end
 ~~~
 
-The `/drug` route will return an array with drug names and the `/doctor` route will return a hash with doctor names and distances as json.
+The `/drugs` route will return an array with drug names and the `/doctors` route will return a hash with doctor names and distances as json.
 
 All we have to do now is to send ajax requests to the server to find drugs and doctors and insert the returned data into the page when user changes inputs.
-But wait a minute. Geolocation should be send to the `/doctor` routes and we still don't have any way to get it from the user.
+But wait a minute. Geolocation should be send to the `/doctors` routes and we still don't have any way to get it from the user.
 This javascript will request coordinates from browser and save them in the global namespace:
 
 **public/app.js**
@@ -481,7 +481,7 @@ And the last step. Here is the javascript which will make nice dropdowns using b
 ~~~javascript
 $(document).ready(function(){
     var adviseDrug = function(symptoms, age, allergies){
-        $.getJSON('/drug', {"symptoms": symptoms, "allergies": allergies, age: age, latitude: window.latitude, longitude: window.longitude}).done(function(json){
+        $.getJSON('/drugs', {"symptoms": symptoms, "allergies": allergies, age: age, latitude: window.latitude, longitude: window.longitude}).done(function(json){
             $(".suggestion .drugs").empty();
             $.each(json, function(key, value){
                 $(".suggestion .drugs").append('<li class="list-group-item">' + value + '</li>');
@@ -490,7 +490,7 @@ $(document).ready(function(){
     };
 
     var adviseDoctor = function(symptoms, age, allergies){
-        $.getJSON('/doctor', {"symptoms": symptoms, "allergies": allergies, age: age, latitude: window.latitude, longitude: window.longitude}).done(function(json){
+        $.getJSON('/doctors', {"symptoms": symptoms, "allergies": allergies, age: age, latitude: window.latitude, longitude: window.longitude}).done(function(json){
             $(".suggestion .doctors").empty();
             $.each(json, function(key, value){
                 $(".suggestion .doctors").append('<li class="list-group-item"><span class="badge">' + value + ' km</span>' + key + '</li>');
