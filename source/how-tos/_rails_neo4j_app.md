@@ -16,7 +16,7 @@ Since the application won't use Active Record we can pass the `--skip-active-rec
 rails new . --skip-active-record
 ~~~
 
-Than add neo4j and haml gems to your `Gemfile`. We will use HAML later as a template engine.
+Than add neo4j and haml gems to your `Gemfile`. We will use Haml later as a template engine.
 
 **Gemfile**
 
@@ -440,3 +440,5 @@ $(document).ready(function(){
     });
 });
 ~~~
+
+The complete example can be found on [github](https://github.com/megorei/rails-neo4j-demo)
