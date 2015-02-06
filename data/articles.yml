@@ -82,3 +82,31 @@
   title: Installing Neo4j in an Azure Linux VM
   link: http://codebetter.com/howarddierking/2012/12/29/installing-neo4j-in-an-azure-linux-vm/
   author: Howard Dierking
+-
+  title: Graph Databases, NOSQL and Neo4j
+  link: http://www.infoq.com/articles/graph-nosql-neo4j
+  author: Peter Neubauer
+-
+  title: Using Neo4j with Rails 3.2
+  link: http://geekmonkey.org/articles/25-using-neo4j-with-rails-3-2
+  author: Fabian Becker
+-
+  title: Everyday JRuby
+  link: https://pragprog.com/magazines/2011-01/everyday-jruby
+  author: Ian Dees
+-
+  title: Riak Compared to Neo4j
+  link: http://docs.basho.com/riak/latest/theory/comparisons/neo4j/
+  author: Basho Technologies, Inc.
+-
+  title: "Hosting My First Rails/Neo4j Project: Tips and Lessons Learned"
+  link: http://blog.subvertallmedia.com/2014/04/28/hosting-my-first-railsneo4j-project-tips-and-lessons-learned/
+  author: Chris Grigg
+-
+  title: Rendering a Neo4j Database in UbiGraph
+  link: http://jexp.de/blog/2014/06/rendering-a-neo4j-database-in-ubigraph/
+  author: Michael Hunger
+-
+  title: Seven Databases in Seven Weeks Neo4j Day 2
+  link: http://blog.wakatta.jp/blog/2011/12/29/seven-databases-in-seven-weeks-neo4j-day-2/
+  author: Frédéric Dumont

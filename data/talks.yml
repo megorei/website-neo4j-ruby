@@ -22,3 +22,7 @@
   title: I Know Kung Fu (or Using Neo4j on Rails Without JRuby)!
   link: http://www.confreaks.com/videos/1577-rulu2012-i-know-kung-fu-or-using-neo4j-on-rails-without-jruby
   speaker: Rogelio J. Samour
+-
+  title: Graph Database. The Natural Way to Persist Data ?
+  link: http://andreasronge.github.io/neo4j-railsconf.pdf
+  speaker: Andreas Kollegge, Andreas Ronge
