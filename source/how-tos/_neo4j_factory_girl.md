@@ -1,6 +1,6 @@
 #### Node assignment
 
-When you tried using factory_girl with [neo4j](https://github.com/neo4jrb/neo4j) you probably got this error:
+If you tried using factory_girl with [neo4j](https://github.com/neo4jrb/neo4j), you probably got this error:
 
     Neo4j::ActiveNode::HasN::NonPersistedNodeError: Unable to create relationship with non-persisted nodes
 
@@ -30,7 +30,7 @@ module FactoryGirl
 
 #### Workaround
 
-To workaround this issue I patched neo4j master branch so it does not throw an exception in this case but just saves the non-persisted node.
+To workaround this issue I patched neo4j master branch, so it does not throw an exception in this case but just saves the non-persisted node.
 
 This patch allows us at least to create factories using factory_girl.
 

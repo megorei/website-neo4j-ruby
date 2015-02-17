@@ -10,7 +10,7 @@ Run this commands from your project directory.
 gem install rails
 ~~~
 
-Since the application won't use Active Record we can pass the `--skip-active-record` option.
+Since the application won't use Active Record, we can pass the `--skip-active-record` option.
 
 ~~~
 rails new . --skip-active-record
@@ -159,7 +159,7 @@ query
 Neo4j::Session.current.query(query_string)
 ~~~
 
-Since Active Record is excluded from the application `db:seed` task is no longer available. That's why I created a rake file with a couple of tasks.
+Since Active Record is excluded from the application, `db:seed` task is no longer available. That's why I created a rake file with a couple of tasks.
 
 **lib/db.rake**
 
@@ -180,6 +180,7 @@ After running `rake db:seed` the query from the seeds file will populate the dat
 
 ### Use cases
 There are 2 use cases in the [neo4 gist](http://gist.neo4j.org/?8748719):
+
 * user should be able to find drugs by symptoms, age, and allergies
 * user should be able to find doctors by symptoms, age, and allergies and get the distance to them
 

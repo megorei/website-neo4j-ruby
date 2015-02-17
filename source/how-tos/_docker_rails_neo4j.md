@@ -31,7 +31,7 @@ We use the existing Docker image `tpires/neo4j` for Neo4j on [Docker Hub](https:
 
 To deploy the Rails app we could just use the official [Docker image for Rails](https://registry.hub.docker.com/_/rails/).
 But we'll better create own image that is built on top of the official image.
-To do that create `Dockerfile` in the root of the Rails app with following content:
+To do that, create `Dockerfile` in the root of the Rails app with following content:
 
 **Dockerfile**
 

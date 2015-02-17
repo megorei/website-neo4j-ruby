@@ -210,7 +210,7 @@ end
 
 The first line will also load some rake tasks from neo4j-core. But
 these rake tasks still won't work because neo4j gem should be loaded before the definition just like we did it in the `app.rb`.
-So lets extract environment initialization into `environment.rb` and require this file from `app.rb` and `Rakefile`.
+So, lets extract environment initialization into `environment.rb` and require this file from `app.rb` and `Rakefile`.
 
 **environment.rb**
 

@@ -5,7 +5,7 @@ Assuming you already installed [neo4j](https://github.com/neo4jrb/neo4j) and [RS
     rake neo4j:install[community-2.1.6,development]  #development database
     rake neo4j:install[community-2.1.6,test]         #test database
 
-By default both databases will try to start on the same port so we should change configuration of the test database to resolve the conflict.
+By default, both databases will try to start on the same port, so we should change configuration of the test database to resolve the conflict.
 
     rake neo4j:config[test,7475]  #port 7475
 
