@@ -49,6 +49,12 @@ In this file we define three environment variables:
 Please replace `your_secret_key` with your key. `rake secret` will help you to generate a new key.
 The host name `neo4j` in the `NEO4J_URL` will be explained later.
 
+NOTE: If you don't want to put the secret key into the repository, please consider using [dotenv](https://github.com/bkeepers/dotenv) and copy `.env` file into the image, like this:
+
+**Dockerfile**
+
+    COPY .env /usr/src/app/
+
 You also have to use the same url for `neo4j` gem in production environment:
 
 **config/environments/production.rb**
