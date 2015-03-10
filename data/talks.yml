@@ -26,3 +26,7 @@
   title: Graph Database. The Natural Way to Persist Data ?
   link: http://andreasronge.github.io/neo4j-railsconf.pdf
   speaker: Andreas Kollegge, Andreas Ronge
+-
+  title: "A Drunkard's Walk: Graphs with Neo4j - James Dabbs - Atlanta Ruby Users' Group"
+  link: https://www.youtube.com/watch?v=Bz5tgZLG5WI
+  speaker: James Dabbs
