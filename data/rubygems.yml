@@ -35,3 +35,8 @@
   title: neo4j-even_easier_id
   description: Automatically creates unique IDs based on the Ruby BSON object ID generation method.
   rubygems: https://rubygems.org/gems/neo4j-even_easier_id
+-
+  title: neo4apis
+  description: A core library for importing data from APIs into neo4j. Designed to be used with an adapter
+  github: https://github.com/neo4jrb/neo4apis/
+  rubygems: https://rubygems.org/gems/neo4apis
