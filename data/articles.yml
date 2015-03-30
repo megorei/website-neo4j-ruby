@@ -114,3 +114,11 @@
   title: Using Neo4j with Ruby on Rails
   link: http://blog.diatomenterprises.com/rails-and-neo4j/
   author: Lauris Blīgzna
+-
+  title: Ruby/Sinatra server with Neo4j DB on pcDuino
+  link: http://learn.linksprite.com/pcduino/ruby/rubysinatra-server-with-neo4j-db-on-pcduino/
+  author: pcDuino
+-
+  title: "Graph Kit for Ruby Part 2: Bootstrapping a Spree Store and Integrating with Neo4j"
+  link: https://www.graphstory.com/site/wp/2014/11/20/graph-kit-for-ruby-part-2-bootstrapping-a-spree-store-and-integrating-with-neo4j/
+  author: Daniel Pritchett
