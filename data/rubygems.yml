@@ -40,3 +40,22 @@
   description: A core library for importing data from APIs into neo4j. Designed to be used with an adapter
   github: https://github.com/neo4jrb/neo4apis/
   rubygems: https://rubygems.org/gems/neo4apis
+-
+  title: devise-neo4j
+  description: Neo4j integration with the Devise authentication framework
+  rubygems: https://rubygems.org/gems/devise-neo4j
+  github: https://github.com/neo4jrb/devise-neo4j
+-
+  title: neo4j-searchkick
+  description: This gem overrides the Searchkick::Results.result method to provide support for Neo4j relationships.
+  rubygems: https://rubygems.org/gems/neo4j-searchkick
+  github: https://github.com/neo4jrb/neo4j-searchkick
+-
+  title: neo4j-meta_model
+  description: A Rails Engine to administer Neo4j models
+  rubygems: https://rubygems.org/gems/neo4j-meta_model
+  github: https://github.com/neo4jrb/neo4j-meta_model
+-
+  title: rom-neo4j
+  description: Neo4j graph relations for Ruby Object Mapper
+  rubygems: https://rubygems.org/gems/rom-neo4j

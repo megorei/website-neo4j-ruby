@@ -122,3 +122,19 @@
   title: "Graph Kit for Ruby Part 2: Bootstrapping a Spree Store and Integrating with Neo4j"
   link: https://www.graphstory.com/site/wp/2014/11/20/graph-kit-for-ruby-part-2-bootstrapping-a-spree-store-and-integrating-with-neo4j/
   author: Daniel Pritchett
+-
+  title: Create a Neo4j Graph Database Using the REST API
+  link: http://www.sitepoint.com/create-neo4j-graph-database-using-rest-api/
+  author: Dan Schaefer
+-
+  title: A CRM with Neo4j and REST
+  link: http://www.sitepoint.com/crm-neo4j-rest/
+  author: Dan Schaefer
+-
+  title: Intro to Neo4j
+  link: http://www.dev9.com/article/2015/2/intro-to-neo4j
+  author: Dustin Barnes
+-
+  title: Query or QueryProxy?
+  link: http://neo4jrb.io/blog/2015/02/08/query_or_query-proxy.html
+  author: Chris Grigg
