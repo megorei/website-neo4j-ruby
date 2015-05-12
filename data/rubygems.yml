@@ -22,6 +22,11 @@
   description: Enables you to use Paperclip with Neo4j.rb.
   rubygems: https://rubygems.org/gems/neo4jrb-paperclip
 -
+  title: kaminari-neo4j
+  description: Adds Neo4j support to kaminari.
+  rubygems: https://rubygems.org/gems/kaminari-neo4j
+  github: https://github.com/megorei/kaminari-neo4j
+-
   title: pacer
   description: JRuby library that enables very expressive graph traversals.
   github: https://github.com/pangloss/pacer

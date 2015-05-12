@@ -13,7 +13,6 @@ You can give it a try by adding in your Gemfile:
 gem 'kaminari', github: 'dpisarewski/kaminari', branch: 'neo4j'
 ~~~
 
+## Update
 
-
-
-
+I created a new gem 'kaminari-neo4j' which adds neo4j support to kaminari. It's available on [rubygems](https://rubygems.org/gems/kaminari-neo4j) and on [github](https://github.com/megorei/kaminari-neo4j).
